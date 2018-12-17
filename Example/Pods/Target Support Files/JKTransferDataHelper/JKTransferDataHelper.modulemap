@@ -1,0 +1,6 @@
+framework module JKTransferDataHelper {
+  umbrella header "JKTransferDataHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

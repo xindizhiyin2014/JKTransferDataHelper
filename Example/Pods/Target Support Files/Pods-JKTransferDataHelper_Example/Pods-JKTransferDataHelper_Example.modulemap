@@ -1,0 +1,6 @@
+framework module Pods_JKTransferDataHelper_Example {
+  umbrella header "Pods-JKTransferDataHelper_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

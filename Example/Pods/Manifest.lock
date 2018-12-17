@@ -1,0 +1,23 @@
+PODS:
+  - JKTransferDataHelper (0.1.0)
+  - Kiwi (3.0.0)
+
+DEPENDENCIES:
+  - JKTransferDataHelper (from `../`)
+  - Kiwi
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kiwi
+
+EXTERNAL SOURCES:
+  JKTransferDataHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JKTransferDataHelper: ddb8043477377ffe5141be4955b77d33786ad1c5
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+
+PODFILE CHECKSUM: f855c42045f35c25accee7dfc68ba188c34737ee
+
+COCOAPODS: 1.5.3
