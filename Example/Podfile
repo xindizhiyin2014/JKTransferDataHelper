@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'JKTransferDataHelper_Example' do
+  pod 'JKTransferDataHelper', :path => '../'
+
+  target 'JKTransferDataHelper_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end
