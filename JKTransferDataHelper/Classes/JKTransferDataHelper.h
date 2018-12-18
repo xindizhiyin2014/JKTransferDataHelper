@@ -13,8 +13,8 @@ typedef NS_ENUM(NSInteger,JKTransferByteSortType){
 };
 @interface JKTransferDataConfig : NSObject
 
-@property (nonatomic,assign) NSUInteger mtuSize;       ///< 最大传输单元大小 单位是位
-@property (nonatomic,assign) NSUInteger packetHeadSize;///< 数据包头的size 单位是位
+@property (nonatomic,assign) NSUInteger mtuSize;       ///< 最大传输单元大小 单位是字节
+@property (nonatomic,assign) NSUInteger packetHeadSize;///< 数据包头的size 单位是字节
 @property (nonatomic,assign) JKTransferByteSortType byteSortType;///< 字节顺序
 
 + (instancetype)configMTUSize:(NSUInteger)mtuSize packetHeadSize:(NSUInteger)packetHeadSize byteSortType:(JKTransferByteSortType)byteSortType;

@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "JKTransferDataHelper.h"
 
 FOUNDATION_EXPORT double JKTransferDataHelperVersionNumber;
 FOUNDATION_EXPORT const unsigned char JKTransferDataHelperVersionString[];
