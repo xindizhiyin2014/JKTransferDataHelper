@@ -141,6 +141,8 @@
 		B8BF4CF4222A4ACAA0D206B4E7E06E8F /* KWDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A209F8D6BB94CE38656259EB0661CDF1 /* KWDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB540E1A97CDADED3360667C37C97DB2 /* KWCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE98B6F09C2C9EAB78C530239BF122 /* KWCallSite.m */; };
 		BBE3EAE2014795FF5E306288B8EF6333 /* KWProbePoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 664CB1D8D5A3D9E289BCA4BA6C14A74A /* KWProbePoller.m */; };
+		BD5D8C2621C7BDB200219D9A /* JKTransferDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = BD5D8C2421C7BDB200219D9A /* JKTransferDataHelper.h */; };
+		BD5D8C2721C7BDB200219D9A /* JKTransferDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5D8C2521C7BDB200219D9A /* JKTransferDataHelper.m */; };
 		BFD1E60DE3BE78A3438C35F0E2A2A778 /* KWBackgroundTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 9350C4FF0CEB340D202429DEA60BEFDB /* KWBackgroundTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C08492B6F86614EB7DD0C15CF15180A8 /* NSObject+KiwiSpyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F23E2E443BB4065CF77584C57E0A066 /* NSObject+KiwiSpyAdditions.m */; };
 		C15B2029A0BCCD1790E897482B336313 /* KWBeSubclassOfClassMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 050B7CDC5E390394AC30D3E1DF09BE4B /* KWBeSubclassOfClassMatcher.m */; };
@@ -408,6 +410,8 @@
 		B8E62A0647EF4EF581D251E3E2D22F7B /* KWExistVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExistVerifier.h; path = Classes/Verifiers/KWExistVerifier.h; sourceTree = "<group>"; };
 		B9170F47F2B4B171C1A7321043469C2C /* KWExpectationType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExpectationType.h; path = Classes/Core/KWExpectationType.h; sourceTree = "<group>"; };
 		BD59A382C173AEBE986EF49B9A0F2F78 /* KiwiConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KiwiConfiguration.h; path = Classes/Core/KiwiConfiguration.h; sourceTree = "<group>"; };
+		BD5D8C2421C7BDB200219D9A /* JKTransferDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JKTransferDataHelper.h; path = JKTransferDataHelper/Classes/JKTransferDataHelper.h; sourceTree = "<group>"; };
+		BD5D8C2521C7BDB200219D9A /* JKTransferDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JKTransferDataHelper.m; path = JKTransferDataHelper/Classes/JKTransferDataHelper.m; sourceTree = "<group>"; };
 		BD8514C7CB84F5CCE65E5F9CB417CD7F /* KWSuiteConfigurationBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWSuiteConfigurationBase.h; path = Classes/Config/KWSuiteConfigurationBase.h; sourceTree = "<group>"; };
 		BE5477D4337C384F322F2C6F7E1F5ED4 /* KWGenericMatchEvaluator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWGenericMatchEvaluator.h; path = Classes/Matchers/KWGenericMatchEvaluator.h; sourceTree = "<group>"; };
 		C0265E9593133780618EEC0319685138 /* KWMock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWMock.h; path = Classes/Mocking/KWMock.h; sourceTree = "<group>"; };
@@ -702,6 +706,8 @@
 			children = (
 				6FC7652ED7EE9CFA5942FA3A88B51778 /* Pod */,
 				EDB5E745758F2E4D1823883C3E42B452 /* Support Files */,
+				BD5D8C2421C7BDB200219D9A /* JKTransferDataHelper.h */,
+				BD5D8C2521C7BDB200219D9A /* JKTransferDataHelper.m */,
 			);
 			name = JKTransferDataHelper;
 			path = ../..;
@@ -844,6 +850,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5D8C2621C7BDB200219D9A /* JKTransferDataHelper.h in Headers */,
 				CACFA3AF385673245334BB7FEFEC4534 /* JKTransferDataHelper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1173,6 +1180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A8B763C78C31499A189E6DED4203028 /* JKTransferDataHelper-dummy.m in Sources */,
+				BD5D8C2721C7BDB200219D9A /* JKTransferDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

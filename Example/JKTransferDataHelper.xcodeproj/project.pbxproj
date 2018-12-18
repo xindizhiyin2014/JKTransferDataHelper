@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FF75D72A32FEE86177CA7C1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0FF75D72A32FEE86177CA7C1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1BF6AC8108FBC35A58DB4370 /* Pods_JKTransferDataHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKTransferDataHelper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CBA0BEDB317763112BBF0EB /* JKTransferDataHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JKTransferDataHelper.podspec; path = ../JKTransferDataHelper.podspec; sourceTree = "<group>"; };
+		3CBA0BEDB317763112BBF0EB /* JKTransferDataHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKTransferDataHelper.podspec; path = ../JKTransferDataHelper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		429C22D674B72B1FFC4B59DC /* Pods_JKTransferDataHelper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKTransferDataHelper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A4405C8EFF6CA9F461AA0A /* Pods-JKTransferDataHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKTransferDataHelper_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKTransferDataHelper_Tests/Pods-JKTransferDataHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JKTransferDataHelper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKTransferDataHelper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +64,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		905EB06D874A3ECE38C02F79 /* Pods-JKTransferDataHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKTransferDataHelper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKTransferDataHelper_Tests/Pods-JKTransferDataHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B4BB7DC5E3A609949957486B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B4BB7DC5E3A609949957486B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C07422C1D9DB03B8EC4128DD /* Pods-JKTransferDataHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKTransferDataHelper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKTransferDataHelper_Example/Pods-JKTransferDataHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C3017963CE79C7AF4E02342F /* Pods-JKTransferDataHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKTransferDataHelper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKTransferDataHelper_Example/Pods-JKTransferDataHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
