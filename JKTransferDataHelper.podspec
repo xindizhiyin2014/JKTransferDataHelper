@@ -24,7 +24,7 @@ this is a tool to handle data when you use udp or bluetooth.it will update with 
   s.homepage         = 'https://github.com/xindizhiyin2014/JKTransferDataHelper'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'xindizhiyin2014' => 'jack18@same.com' }
+  s.author           = { 'xindizhiyin2014' => '92909764@qq.com' }
   s.source           = { :git => 'https://github.com/xindizhiyin2014/JKTransferDataHelper.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
