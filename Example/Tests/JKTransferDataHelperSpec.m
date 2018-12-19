@@ -39,7 +39,7 @@ describe(@"JKTransferDataHelper", ^{
             NSData *data1 = [str1 dataUsingEncoding:NSUTF8StringEncoding];
            NSData *formatData1 = [JKTransferDataHelper formatData:data1 dataConfig:dataConfig];
             [[theValue(formatData1.length) should] equal:theValue(4 + 4 +5)];
-            
+
             NSString *str2 = createStringWithCount(20);
             NSData *data2 = [str2 dataUsingEncoding:NSUTF8StringEncoding];
             NSData *formatData2 = [JKTransferDataHelper formatData:data2 dataConfig:dataConfig];
@@ -60,7 +60,7 @@ describe(@"JKTransferDataHelper", ^{
             [[theValue(unFormatData1.length) should] equal:theValue(5)];
             NSString *result1 = [[NSString alloc] initWithData:unFormatData1 encoding:NSUTF8StringEncoding];
             [[result1 should] equal:str1];
-            
+
             NSString *str2 = createStringWithCount(20);
             NSData *data2 = [str2 dataUsingEncoding:NSUTF8StringEncoding];
             NSMutableData *formatData2 = [JKTransferDataHelper formatData:data2 dataConfig:dataConfig];
@@ -69,12 +69,12 @@ describe(@"JKTransferDataHelper", ^{
             [[theValue(unFormatData2.length) should] equal:theValue(20)];
             NSString *result2 = [[NSString alloc] initWithData:unFormatData2 encoding:NSUTF8StringEncoding];
             [[result2 should] equal:str2];
-            
+
             NSString *str3 = createStringWithCount(20+16);
             NSData *data3 = [str3 dataUsingEncoding:NSUTF8StringEncoding];
             NSMutableData *formatData3 = [JKTransferDataHelper formatData:data3 dataConfig:dataConfig];
             [[theValue(formatData3.length) should] equal:theValue(4 + 20 + 20 +4+4)];
-            
+
             NSMutableData *unFormatData3 = [JKTransferDataHelper unFormatData:formatData3 dataConfig:dataConfig];
             [[theValue(unFormatData3.length) should] equal:theValue(20 + 16)];
             NSString *result3 = [[NSString alloc] initWithData:unFormatData3 encoding:NSUTF8StringEncoding];
