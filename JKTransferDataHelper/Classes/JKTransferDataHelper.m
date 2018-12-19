@@ -44,6 +44,18 @@
     return nil;
 }
 
++ (NSMutableData *)appendUnitPacketData:(NSData *)unitPacketData originData:(NSMutableData *)originData dataLength:(NSUInteger)dataLength dataConfig:(JKTransferDataConfig *)dataConfig{
+    if (unitPacketData.length != dataConfig.mtuSize) {
+        return originData;
+    }
+  NSUInteger packetSortNum = [self getOriginDataLength:unitPacketData dataConfig:dataConfig];
+    
+    NSUInteger location = packetSortNum*dataConfig.mtuSize;
+    NSRange range = NSMakeRange(location, dataConfig.mtuSize);
+    [originData replaceBytesInRange:range withBytes:[unitPacketData bytes]];
+    return originData;
+}
+
 + (NSData *)configPacketHead:(NSUInteger)originDataLength dataConfig:(JKTransferDataConfig *)dataConfig{
     NSUInteger coverted;
     if (dataConfig.byteSortType == JKTransferByteSortSmall) {//small model
