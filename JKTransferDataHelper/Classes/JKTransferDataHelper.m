@@ -79,7 +79,6 @@
     NSMutableData *mutableData = [NSMutableData new];
     for (NSUInteger i = 0; i< packetNum-1; i++) {
         NSUInteger location = i*dataConfig.mtuSize;
-        location = location?(location-1):0;
         NSRange range = NSMakeRange(location, (dataConfig.mtuSize- dataConfig.packetHeadSize));
         NSData *unitPacketData = [data subdataWithRange:range];
         NSData *unitPacketHeadData = [self configPacketHead:i dataConfig:dataConfig];
@@ -88,7 +87,6 @@
     }
     if(tailDataLength >0){
         NSUInteger location = (packetNum -1) *(dataConfig.mtuSize- dataConfig.packetHeadSize);
-        location = location?(location-1):0;
         NSRange range = NSMakeRange(location, tailDataLength);
         NSData *unitPacketBodyData = [data subdataWithRange:range];
         NSData *unitPacketHeadData = [self configPacketHead:packetNum -1 dataConfig:dataConfig];
@@ -99,7 +97,7 @@
 }
 
 + (NSUInteger)getOriginDataLength:(NSData *)data dataConfig:(JKTransferDataConfig *)dataConfig{
-    if (data.length> dataConfig.packetHeadSize) {
+    if (data.length > dataConfig.packetHeadSize) {
         NSData *packetHeadData = [data subdataWithRange:NSMakeRange(0, dataConfig.packetHeadSize)];
         NSUInteger dataLength =0;
         [packetHeadData getBytes:&dataLength length:dataConfig.packetHeadSize];
@@ -138,7 +136,6 @@
     NSMutableData *mutableData = [NSMutableData new];
     for (NSUInteger i = 0; i< packetNum-1; i++) {
         NSUInteger location = i*dataConfig.mtuSize;
-        location = location?(location-1):0;
         NSRange range = NSMakeRange(location, dataConfig.mtuSize);
         NSData *unitPacketData = [data subdataWithRange:range];
         NSData *packetBodyData = [unitPacketData subdataWithRange:NSMakeRange(dataConfig.packetHeadSize-1, (dataConfig.mtuSize - dataConfig.packetHeadSize))];
@@ -146,8 +143,6 @@
     }
     if(tailDataLength >dataConfig.packetHeadSize){
         NSUInteger location = (packetNum -1) *dataConfig.mtuSize;
-        location = location?(location-1):0;
-
         NSRange range = NSMakeRange(location, tailDataLength);
         NSData *unitPacketData = [data subdataWithRange:range];
         NSData *packetBodyData = [unitPacketData subdataWithRange:NSMakeRange(dataConfig.packetHeadSize-1, (tailDataLength - dataConfig.packetHeadSize))];
