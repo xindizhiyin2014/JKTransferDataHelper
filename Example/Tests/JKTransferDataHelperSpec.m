@@ -80,6 +80,45 @@ describe(@"JKTransferDataHelper", ^{
             NSString *result3 = [[NSString alloc] initWithData:unFormatData3 encoding:NSUTF8StringEncoding];
             [[result3 should] equal:str3];
         });
+        it(@"getFormatBodyDataLengthWithOriginData", ^{
+            JKTransferDataConfig *dataConfig = [JKTransferDataConfig new];
+            dataConfig.mtuSize = 20;
+            dataConfig.packetHeadSize = 4;
+            NSString *str1 = createStringWithCount(5);
+            NSData *data1 = [str1 dataUsingEncoding:NSUTF8StringEncoding];
+            NSUInteger dataLength1 = [JKTransferDataHelper getFormatBodyDataLengthWithOriginData:data1 dataConfig:dataConfig];
+             [[theValue(dataLength1) should] equal:theValue(4 + 5)];
+            
+            NSString *str2 = createStringWithCount(20);
+            NSData *data2 = [str2 dataUsingEncoding:NSUTF8StringEncoding];
+            NSUInteger dataLength2 = [JKTransferDataHelper getFormatBodyDataLengthWithOriginData:data2 dataConfig:dataConfig];
+            [[theValue(dataLength2) should] equal:theValue(20 +4+4)];
+            
+            NSString *str3 = createStringWithCount(20+16);
+            NSData *data3 = [str3 dataUsingEncoding:NSUTF8StringEncoding];
+            NSUInteger dataLength3 = [JKTransferDataHelper getFormatBodyDataLengthWithOriginData:data3 dataConfig:dataConfig];
+            [[theValue(dataLength3) should] equal:theValue(20 + 20 +4+4)];
+            
+        });
+        
+        it(@"getPacketHeadSizeWithOriginData", ^{
+            
+            NSString *str1 = createStringWithCount(5);
+            NSData *data1 = [str1 dataUsingEncoding:NSUTF8StringEncoding];
+            NSUInteger packetHeadSize1 = [JKTransferDataHelper getPacketHeadSizeWithOriginData:data1 mtuSize:20];
+            [[theValue(packetHeadSize1) should] equal:theValue(1)];
+            
+            NSString *str2 = createStringWithCount(300);
+            NSData *data2 = [str2 dataUsingEncoding:NSUTF8StringEncoding];
+            NSUInteger packetHeadSize2 = [JKTransferDataHelper getPacketHeadSizeWithOriginData:data2 mtuSize:20];
+            [[theValue(packetHeadSize2) should] equal:theValue(2)];
+//
+//            NSString *str3 = createStringWithCount(20+16);
+//            NSData *data3 = [str3 dataUsingEncoding:NSUTF8StringEncoding];
+//            NSUInteger dataLength3 = [JKTransferDataHelper getFormatBodyDataLengthWithOriginData:data3 dataConfig:dataConfig];
+//            [[theValue(dataLength3) should] equal:theValue(20 + 20 +4+4)];
+            
+        });
         
         
     });

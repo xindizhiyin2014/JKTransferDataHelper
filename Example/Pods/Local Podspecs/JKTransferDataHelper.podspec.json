@@ -1,15 +1,15 @@
 {
   "name": "JKTransferDataHelper",
   "version": "0.1.0",
-  "summary": "A short description of JKTransferDataHelper.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "this is a tool to handle data when you use udp or bluetooth",
+  "description": "this is a tool to handle data when you use udp or bluetooth.it will update with the needs",
   "homepage": "https://github.com/xindizhiyin2014/JKTransferDataHelper",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "xindizhiyin2014": "jack18@same.com"
+    "xindizhiyin2014": "92909764@qq.com"
   },
   "source": {
     "git": "https://github.com/xindizhiyin2014/JKTransferDataHelper.git",

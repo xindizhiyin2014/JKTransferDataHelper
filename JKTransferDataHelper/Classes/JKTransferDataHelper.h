@@ -70,5 +70,24 @@ typedef NS_ENUM(NSInteger,JKTransferByteSortType){
  */
 + (NSUInteger)getOriginDataLength:(NSData *)data dataConfig:(JKTransferDataConfig *)dataConfig;
 
+/**
+ get the format dataLength with packet sort Num
+
+ @param originData originData
+ @param dataConfig dataConfig
+ @return the dataLenght
+ */
++ (NSUInteger)getFormatBodyDataLengthWithOriginData:(NSData *)originData dataConfig:(JKTransferDataConfig *)dataConfig;
+
+
+/**
+ get appropriate PacketHeadSize with originData and mtuSize
+
+ @param originData originData
+ @param mtuSize mtuSize
+ @return PacketHeasSize
+ */
++ (NSUInteger)getPacketHeadSizeWithOriginData:(NSData *)originData mtuSize:(NSUInteger)mtuSize;
+
 @end
 

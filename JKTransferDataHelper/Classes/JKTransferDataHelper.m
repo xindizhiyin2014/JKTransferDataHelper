@@ -163,4 +163,33 @@
     return mutableData;
 }
 
++ (NSUInteger)getFormatBodyDataLengthWithOriginData:(NSData *)originData dataConfig:(JKTransferDataConfig *)dataConfig{
+    NSUInteger packetNum = ceil(originData.length *1.0/(dataConfig.mtuSize - dataConfig.packetHeadSize));
+    NSUInteger tailDataLength = originData.length%(dataConfig.mtuSize - dataConfig.packetHeadSize);
+    NSUInteger dataLength = dataConfig.mtuSize * (packetNum-1);
+    
+    if(tailDataLength >0){
+        dataLength +=(dataConfig.packetHeadSize + tailDataLength);
+        
+    }
+    return dataLength;
+}
+
++ (NSUInteger)getPacketHeadSizeWithOriginData:(NSData *)originData mtuSize:(NSUInteger)mtuSize{
+    NSUInteger dataLenth = 1;
+    NSUInteger packetHeadSize = 1;
+    JKTransferDataConfig *dataConfig = [JKTransferDataConfig new];
+    dataConfig.mtuSize = mtuSize;
+    for (NSUInteger i = 1; i< mtuSize; i++) {
+        dataLenth *= 2*2*2*2*2*2*2*2;
+        packetHeadSize = i;
+        NSUInteger formatedDataLength = [self getFormatBodyDataLengthWithOriginData:originData dataConfig:dataConfig];
+        if (dataLenth>=formatedDataLength) {
+            return packetHeadSize;
+        }
+        
+    }
+    return 0;
+}
+
 @end
