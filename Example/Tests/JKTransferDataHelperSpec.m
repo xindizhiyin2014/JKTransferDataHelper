@@ -112,11 +112,12 @@ describe(@"JKTransferDataHelper", ^{
             NSData *data2 = [str2 dataUsingEncoding:NSUTF8StringEncoding];
             NSUInteger packetHeadSize2 = [JKTransferDataHelper getPacketHeadSizeWithOriginData:data2 mtuSize:20];
             [[theValue(packetHeadSize2) should] equal:theValue(2)];
-//
-//            NSString *str3 = createStringWithCount(20+16);
-//            NSData *data3 = [str3 dataUsingEncoding:NSUTF8StringEncoding];
-//            NSUInteger dataLength3 = [JKTransferDataHelper getFormatBodyDataLengthWithOriginData:data3 dataConfig:dataConfig];
-//            [[theValue(dataLength3) should] equal:theValue(20 + 20 +4+4)];
+            NSUInteger num = 20 *2*2*2*2*2*2*2*2*2*2 *2*2*2*2*2*2*2*2*2*2;
+            NSString *str3 = createStringWithCount(num);
+            NSData *data3 = [str3 dataUsingEncoding:NSUTF8StringEncoding];
+            NSUInteger packetHeadSize3 = [JKTransferDataHelper getPacketHeadSizeWithOriginData:data3 mtuSize:20];
+            NSLog(@"AAAA");
+
             
         });
         

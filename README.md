@@ -22,7 +22,7 @@ pod 'JKTransferDataHelper'
 
 ## Author
 
-xindizhiyin2014, jack18@same.com
+xindizhiyin2014, 929097264@qq.com
 
 ## License
 
